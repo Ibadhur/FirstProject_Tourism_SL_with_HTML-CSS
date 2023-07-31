@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+        <nav>
+            <div id="ToDoList" class="client_details">
+                <form action="" class="form" id="userdetailid"><h3 class="userdetails">Please fill the below and plan your trip</h3><br>
+                    <input class="Textbox" placeholder=" E-mail Address"  type="text" id="e-mailtolog" v-model="msg1" /><br>
+                    <input class="Textbox" placeholder=" First Name"  type="text" id="fname" v-model="msg2" /><br>   
+                    <input class="Textbox" placeholder=" Surname"  type="text" id="surname" v-model="msg3" /><br>
+                    <input class="Textbox" placeholder=" Mobile Number"  type="text" id="mnumb-" v-model="msg4" /><br>
+                    <label>Arrival Date</label>
+                    <input class="Textbox" placeholder=" Arrival Date"  type="date" id="arrivaldate" v-model="msg5" /><br>
+                    <label>Planned dates and places where to go and stay</label><br>
+                    <input class="Textbox" placeholder=" Planned Date"  type="date" id="visitdate" v-model="msg6" /><br>
+                    <input class="Textbox" placeholder=" Provinces you planned to visit"  type="text" id="provincename" v-model="msg7" /><br>
+                    <input class="Textbox" placeholder=" Places you planned to visit"  type="text" id="placename" v-model="msg8" /><br>
+                    <input class="Textbox" placeholder=" Place where you planned to stay "  type="text" id="conpwd" v-model="msg9" /><br>
+
+                    
+                    
+                    <label class="radio" >Male</label>
+                    <input class="btnradio" type="radio" value="1" id="malegender" name="gender"/>
+                    <label class="radio" >Female</label>
+                    <input class="btnradio" type="radio" value="1" id="femalegender" name="gender"/>
+                    <label class="radio" >Prefer not to answer</label>
+                    <input class="btnradio" type="radio" value="1" id="othergen" name="gender"/>
+                    <div class="radio__radio"></div>
+                </form>
+                <form action="" id="saveddetails" class="saved_list"><h2 class="cust_det_hline"> Here your plan..</h2><br><br>
+                    <p><ul> <li> E-mailAddress: <p class="msg">{{msg1}}</p></li>
+                        <li>First Name: <p class="msg">{{msg2}}</p></li>
+                            <li>Surname: <p class="msg">{{msg3}}</p></li>
+                                <li>Mobile Number: <p class="msg">{{msg4}}</p></li>
+                                    <li>Arrival Date :<p class="msg">{{msg5}}</p></li><br><br>
+                    <u><h3 class="cust_det_subhline">Planned dates and places where to go and stay</h3></u><br><br>    
+                        <li>Planned to go on : <p class="msg">{{msg6}}</p></li>
+                            <li>Provinces you planned to visit : <p class="msg">{{msg7}}</p></li>
+                                <li>Places you planned to visit : <p class="msg">{{msg8}}</p></li>
+                                    <li>Place where you planned to stay : <p class="msg">{{msg9}}</p></li>
+                 </ul></p><br><br><button input-type="reset" class="Clear" >Clear</button><button class="Printdoc" onclick="Print()">Print</button></form>               
+                
+            </div>
+        
+            
+        </nav>
+            <script src="Structure.js"></script>
+
+
+    <footer>
+        
+
+    </footer>
+
+    
+    
+</body>
+</html>
